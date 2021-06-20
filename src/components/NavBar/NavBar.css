@@ -38,6 +38,6 @@
 }
 
 .NavBar .NavBar__Nav li a:link { color: black; text-decoration: none; }
-.NavBar .NavBar__Nav li a:visited { color: green; text-decoration: none; }
+.NavBar .NavBar__Nav li a:visited { color: rgb(51, 0, 133); text-decoration: none; }
 .NavBar .NavBar__Nav li a:hover { color: gray }
-.NavBar .NavBar__Nav li a:active { color: blue; text-decoration: none; } 
+.NavBar .NavBar__Nav li a:active { color: red; text-decoration: none; } 
