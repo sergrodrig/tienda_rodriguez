@@ -1,15 +1,18 @@
-import logo from './logo.svg';
+import { Component } from 'react';
 import './App.css';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p><code>const nananananananana = 'batman'</code></p>
-      </header>
-    </div>
-  );
-}
+import NavBar from './components/NavBar/NavBar';
+import ItemListContainer from './components/container/ItemListContainer.jsx';
 
+class App extends Component{
+  render () {
+    return (
+      <div className="App">
+        <NavBar />
+        <ItemListContainer greeting={`const nananananananana = 'batman'`} />
+      </div>
+    );
+  }
+}
+  
 export default App;
