@@ -1,13 +1,23 @@
-import React from 'react';
-import logo from '../../logo.svg';
+import React, { useEffect, useState } from 'react';
 import './ItemListContainer.css';
+import ItemList from './ItemList.jsx';
 
-const ItemListContainer = ({ greeting }) => {
-  return (
-        <header className="App-header">
-            <img src={logo} className="App-logo" alt="logo" />
-            <p><code>{greeting}</code></p>
-        </header>
+const ItemListContainer = () => {
+
+    const [productos, setProductos] = useState([])
+
+    useEffect(()=>{
+        fetch('https://jsonplaceholder.typicode.com/users')
+            .then((response) => response.json())
+            .then((json) => {
+                setProductos(json)
+            });
+    })
+
+    return (
+        <div className="ItemList">
+            <ItemList items={ productos } />
+        </div>
     );
 }
 
